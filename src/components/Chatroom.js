@@ -23,13 +23,14 @@ export default function Chatroom() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
 
-        const {displayName, photoURL} = auth.currentUser;
+        const {displayName, photoURL, uid} = auth.currentUser;
 
         await addDoc(messageCollection, {
             text: input,
             time: serverTimestamp(),
             username: displayName,
-            photoURL: photoURL
+            photoURL: photoURL,
+            uid: uid
         });
 
         setInput('');
