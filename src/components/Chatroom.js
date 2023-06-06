@@ -21,7 +21,7 @@ export default function Chatroom() {
     }
 
     useEffect(()=>{
-        endPoint.current.scrollIntoView({behavior: 'smooth'});
+        if(endPoint) endPoint.current.scrollIntoView({behavior: 'smooth'});
     })
 
     const handleSubmit = async (e) => {
@@ -38,14 +38,14 @@ export default function Chatroom() {
         });
 
         setInput('');
-        endPoint.current.scrollIntoView({behavior: 'smooth'});
+        if(endPoint) endPoint.current.scrollIntoView({behavior: 'smooth'});
     }
 
     return (
         <div>
             <button onClick={signUserOut} className='sign-out-button'> Sign Out </button>
             <div className='message-list'>
-                {messageList && messageList.map((message)=><Message message={message} />)}
+                {messageList && messageList.map((message)=><Message message={message}/>)}
                 <div ref={endPoint}></div>
             </div>
             <form onSubmit={handleSubmit} className='message-form'>

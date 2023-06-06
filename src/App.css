@@ -26,9 +26,9 @@ body{
 }
 
 .message-form{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -39,7 +39,7 @@ body{
 }
 
 .input-button{
-    margin: 10px;
+    margin-left: 10px;
     width: 65px;
     height: 35px;
     background: #9DB2BF;
