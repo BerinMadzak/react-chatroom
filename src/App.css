@@ -1,1 +1,97 @@
+body{
+    background: linear-gradient(90deg, #4680AB 0%, #7172AE 100%);
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 100px auto;
+    background-color: #27374D;
+    min-height: 600px;
+    width: 500px;
+}
+
+.sign-in-button{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+}
+
+.sign-out-button{
+    float: right;
+    margin: 10px;
+    background: #9DB2BF;
+}
+
+.message-form{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 75px;
+    margin-left: 10px;
+}
+
+.input-field{
+    width: 400px;
+    height: 30px;
+    background: #9DB2BF;
+}
+
+.input-button{
+    margin: 10px;
+    width: 60px;
+    height: 35px;
+    background: #9DB2BF;
+}
+
+.message-list{
+    margin: 40px 0px 0px 10px;
+    background: #526D82;
+    height: 500px;
+    width: 480px;
+    overflow-y: scroll;
+}
+
+.message{
+    display: flex;
+    flex-direction: row;
+    border: solid black 1px;
+}
+
+.message-inner{
+    display: flex;
+    flex-direction: column;
+}
+
+.message-icon{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+.message-text{
+   text-align: left;
+   margin-top: -10px;
+}
+
+.message-username{
+    font-size: 15px;
+}
+
+.self-message{
+    flex-direction: row-reverse;
+}
+
+.self-text{
+    text-align: right;
+}
+
+.title{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    margin-left: 170px;
+    margin-top: 5px;
+}
 

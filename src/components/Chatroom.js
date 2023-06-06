@@ -39,14 +39,14 @@ export default function Chatroom() {
 
     return (
         <div>
-            <button onClick={signUserOut}> Sign Out </button>
-            <div>
+            <button onClick={signUserOut} className='sign-out-button'> Sign Out </button>
+            <div className='message-list'>
                 {messageList && messageList.map((message)=><Message message={message} />)}
+                <div ref={endPoint}></div>
             </div>
-            <div ref={endPoint}></div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder='Enter text...' value={input} onChange={(e)=>setInput(e.target.value)}/>
-                <input type="submit" />
+            <form onSubmit={handleSubmit} className='message-form'>
+                <input className="input-field" type="text" placeholder='Enter text...' value={input} onChange={(e)=>setInput(e.target.value)}/>
+                <input className="input-button" type="submit" value="Send"/>
             </form>
         </div>
     )

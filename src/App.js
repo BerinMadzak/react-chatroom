@@ -8,7 +8,8 @@ function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div>
+    <div className='App'>
+      <h1 className='title'>React Chatroom</h1>
       {user ? <Chatroom /> : <SignIn />}
     </div>
   );
