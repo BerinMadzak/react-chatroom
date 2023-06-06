@@ -9,7 +9,8 @@ export default function Message(props) {
             {auth.currentUser.uid === uid ? 'message self-message' : 'message'}>
             <img className="message-icon" src={photoURL} />
             <div className='message-inner'> 
-                <h1 className='message-username'>{username}</h1>
+                <h1 className=
+                    {auth.currentUser.uid === uid ? 'message-username self-text' : 'message-username'}>{username}</h1>
                 <p className=
                     {auth.currentUser.uid === uid ? 'message-text self-text' : 'message-text'}>{text}</p>
             </div>
