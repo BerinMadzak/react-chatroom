@@ -20,6 +20,10 @@ export default function Chatroom() {
         await signOut(auth);
     }
 
+    useEffect(()=>{
+        endPoint.current.scrollIntoView({behavior: 'smooth'});
+    })
+
     const handleSubmit = async (e) => {
         e.preventDefault(); 
 
